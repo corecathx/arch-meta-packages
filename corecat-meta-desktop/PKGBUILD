@@ -1,0 +1,47 @@
+# Maintainer: CoreCat <corecathx@proton.me>
+pkgname="corecat-meta-desktop"
+pkgver=1
+pkgrel=1
+pkgdesc="CoreCat's desktop package group"
+arch=("any")
+license=("BSD-0")
+
+depends=(
+  "kitty"
+  "nautilus"
+  "noto-fonts"
+  "noto-fonts-cjk"
+  "xdg-desktop-portal"
+  "xdg-desktop-portal-hyprland"
+)
+
+_aur_deps=(
+  "zen-browser-bin"
+  "visual-studio-code-bin"
+  "ttf-jetbrains-mono-nerd"
+  "whisker-shell-git"
+  "ttf-twemoji"
+)
+
+prepare() {
+  if ! command -v yay >/dev/null 2>&1; then
+    echo ":: Bootstrapping yay..."
+    git clone https://aur.archlinux.org/yay.git
+    pushd yay
+    makepkg -si --noconfirm
+    popd
+    rm -rf yay
+  fi
+
+  echo ":: Installing AUR dependencies..."
+  for pkg in "${_aur_deps[@]}"; do
+    if ! pacman -Qi "$pkg" &>/dev/null; then
+      echo ":: Installing missing AUR dependency: $pkg"
+      yay -S --noconfirm "$pkg"
+    fi
+  done
+}
+
+package() {
+  :
+}
