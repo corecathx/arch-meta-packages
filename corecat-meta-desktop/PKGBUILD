@@ -11,6 +11,7 @@ depends=(
   "nautilus"
   "noto-fonts"
   "noto-fonts-cjk"
+  "ttf-outfit"
   "xdg-desktop-portal"
   "xdg-desktop-portal-hyprland"
 )

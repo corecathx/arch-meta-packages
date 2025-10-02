@@ -1,0 +1,30 @@
+# Maintainer: CoreCat <corecathx@proton.me>
+pkgname="corecat-meta-base"
+pkgver=1
+pkgrel=1
+pkgdesc="CoreCat's base package group"
+arch=("any")
+license=("BSD-0")
+depends=(
+  "base"
+  "base-devel"
+  "linux-zen"
+  "linux-firmware"
+  "git"
+  "nano"
+  "neovim"
+  "pipewire"
+  "wireplumber"
+  "pipewire-alsa"
+  "pipewire-pulse"
+  "intel-ucode"
+  "networkmanager"
+  "btrfs-progs"
+  "fish"
+  "bluez"
+  "bluez-utils"
+)
+
+package() {
+    :
+}

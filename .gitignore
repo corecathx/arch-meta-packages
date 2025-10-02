@@ -1,0 +1,7 @@
+corecat-meta-base/pkg
+corecat-meta-base/src
+corecat-meta-base/corecat-meta-base-1-1-any.pkg.tar.zst
+
+corecat-meta-desktop/pkg
+corecat-meta-desktop/src
+corecat-meta-desktop/corecat-meta-desktop-1-1-any.pkg.tar.zst
