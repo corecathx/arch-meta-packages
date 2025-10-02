@@ -1,0 +1,15 @@
+pkgbase = corecat-meta-desktop
+	pkgdesc = CoreCat's desktop package group
+	pkgver = 1
+	pkgrel = 1
+	arch = any
+	license = BSD-0
+	depends = kitty
+	depends = nautilus
+	depends = noto-fonts
+	depends = noto-fonts-cjk
+	depends = ttf-outfit
+	depends = xdg-desktop-portal
+	depends = xdg-desktop-portal-hyprland
+
+pkgname = corecat-meta-desktop
