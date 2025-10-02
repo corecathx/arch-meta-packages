@@ -19,6 +19,8 @@ depends=(
   "ttf-jetbrains-mono-nerd"
   "whisker-shell-git"
   "ttf-twemoji"
+  "python-gobject" # for some reason power-profiles-daemon requires this????
+  "qt6ct"
 )
 
 package() {
